@@ -1,0 +1,18 @@
+{
+  "asset_id": "secops-kernel-lab",
+  "inventory_collected_at": "2026-11-07T19:24:12.372214+00:00",
+  "rule_id": "lab-oracle-kernel-v1",
+  "scope": "Exact laboratory versions; not a general vulnerability scanner",
+  "reference": "https://ubuntu.com/security/CVE-2026-92502",
+  "checks": {
+    "expected_old_kernel_active": true,
+    "fixed_kernel_package_installed": true,
+    "fixed_kernel_active": false
+  },
+  "status": "fixed_kernel_installed_not_active",
+  "recommended_runbook": "activate-fixed-kernel",
+  "approval_required": true,
+  "exploitation_confirmed": false,
+  "action_executed": false,
+  "demo_fixture": true
+}

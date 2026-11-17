@@ -1,0 +1,38 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+id_rsa*
+id_ed25519*
+.ssh/
+.aws/
+.oci/
+credentials*
+*service-account*.json
+inventory/assets.yaml
+
+# Runtime evidence and local audit trails
+reports/
+*.log
+*.sqlite*
+
+# Environments, caches and editor state
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+.idea/
+.vscode/
+node_modules/
+dist/
+.pytest_cache/
+
+# Security scanner reports can contain findings
+gitleaks*.json
+gitleaks*.sarif

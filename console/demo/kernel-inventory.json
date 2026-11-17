@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "asset_id": "secops-kernel-lab",
+  "collected_at": "2026-11-07T19:24:12.372214+00:00",
+  "collection_status": "complete",
+  "hostname": "secops-kernel-lab",
+  "architecture": "aarch64",
+  "os_release": {
+    "NAME": "Ubuntu",
+    "ID": "ubuntu",
+    "PRETTY_NAME": "Ubuntu 24.04.5 LTS",
+    "VERSION_ID": "24.04",
+    "VERSION": "24.04.5 LTS (Noble Numbat)",
+    "VERSION_CODENAME": "noble",
+    "ID_LIKE": "debian",
+    "HOME_URL": "https://www.ubuntu.com/",
+    "SUPPORT_URL": "https://help.ubuntu.com/",
+    "BUG_REPORT_URL": "https://bugs.launchpad.net/ubuntu/",
+    "PRIVACY_POLICY_URL": "https://www.ubuntu.com/legal/terms-and-policies/privacy-policy",
+    "UBUNTU_CODENAME": "noble",
+    "LOGO": "ubuntu-logo"
+  },
+  "active_kernel": "7.0.0-1012-oracle",
+  "installed_kernel_packages": {
+    "linux-image-7.0.0-1012-oracle": "7.0.0-1012.12~24.04.1",
+    "linux-image-7.0.0-1013-oracle": "7.0.0-1013.13~24.04.1"
+  },
+  "demo_fixture": true
+}

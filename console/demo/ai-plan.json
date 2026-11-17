@@ -1,0 +1,33 @@
+{
+  "model": "gemini-3.1-flash-lite",
+  "created_at": "2026-11-07T19:17:35.990249+00:00",
+  "inventory_collected_at": "2026-11-07T19:24:10.818144+00:00",
+  "proposal": {
+    "asset_id": "ssh-vulnerable",
+    "summary": "El contenedor ssh-vulnerable presenta una configuración que coincide con las condiciones de exposición descritas en el aviso de Alpine del 5 de noviembre de 2026 sobre un posible bypass de autenticación en OpenSSH 10.6p1 compilado con musl.",
+    "rationale": "El sistema cumple con todas las precondiciones técnicas para este escenario: utiliza OpenSSH 10.6p1 con musl, PAM no está soportado/deshabilitado, PasswordAuthentication está habilitado y existen cuentas con la estructura de credenciales específica ('*' y hash SHA-crypt). La vulnerabilidad aprovecha una debilidad en el manejo de estas credenciales específicas bajo dichas condiciones de compilación.",
+    "limitations": [
+      "La explotación del bypass no está confirmada ni se ha observado actividad anómala.",
+      "El contenedor opera dentro de una red Docker interna sin puertos publicados hacia el exterior, lo que reduce drásticamente la superficie de ataque.",
+      "La mitigación propuesta deshabilita el método de autenticación por contraseña, lo cual requiere que los usuarios tengan configurada la autenticación por llaves públicas para mantener el acceso.",
+      "El cambio en la configuración no corrige el binario subyacente y no persistirá si el contenedor se recrea desde la imagen vulnerable original."
+    ],
+    "recommended_runbook": "disable-ssh-password-authentication"
+  },
+  "approval_required": true,
+  "approved": false,
+  "action_executed": false,
+  "usage": {
+    "promptTokenCount": 1589,
+    "candidatesTokenCount": 319,
+    "totalTokenCount": 1908,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1589
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "demo_fixture": true
+}

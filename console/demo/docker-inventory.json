@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "asset_id": "ssh-vulnerable",
+  "collected_at": "2026-11-07T19:24:10.818144+00:00",
+  "collection_status": "complete",
+  "container": {
+    "running": true,
+    "image_reference": "secops/ssh-lab:vulnerable",
+    "image_id": "sha256:648a43a9b4adbdc08a20a694024204ea180fead33bdd2fa85a61ad7690e7fcfd",
+    "network_mode": "secops-ssh-net",
+    "port_bindings": {}
+  },
+  "software": {
+    "openssh": "OpenSSH_10.6p1, OpenSSL 3.5.9 29 Sep 2026",
+    "musl": "1.2.6-r3",
+    "alpine_release": "3.24.4",
+    "architecture": "aarch64"
+  },
+  "ssh_configuration": {
+    "passwordauthentication": [
+      "yes"
+    ],
+    "usepam": [],
+    "permitrootlogin": [
+      "no"
+    ],
+    "allowusers": [
+      "labuser"
+    ]
+  },
+  "account_conditions": {
+    "labuser_has_star": true,
+    "reference_has_sha_crypt": true
+  },
+  "assessment": "pending",
+  "demo_fixture": true
+}

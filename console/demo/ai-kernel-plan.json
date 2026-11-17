@@ -1,0 +1,33 @@
+{
+  "model": "gemini-3.1-flash-lite",
+  "created_at": "2026-11-07T19:21:51.632329+00:00",
+  "inventory_collected_at": "2026-11-07T19:24:12.372214+00:00",
+  "proposal": {
+    "asset_id": "secops-kernel-lab",
+    "summary": "El host secops-kernel-lab presenta el paquete del kernel corregido (7.0.0-1013-oracle) instalado, pero continúa ejecutando el kernel vulnerable (7.0.0-1012-oracle).",
+    "rationale": "La instalación de un paquete de kernel y su activación son estados distintos en el ciclo de vida de Linux. Aunque el paquete ya ha sido actualizado para mitigar la CVE-2026-92502, la persistencia del kernel activo actual en memoria mantiene la vulnerabilidad vigente. Debido a la criticidad alta asignada al activo en el inventario del laboratorio, la transición al kernel corregido debe gestionarse mediante un reinicio autorizado.",
+    "limitations": [
+      "La evaluación se limita a los datos de inventario y no constituye una confirmación de explotación técnica.",
+      "El procedimiento de activación requiere aprobación humana explícita debido a la criticidad de negocio del activo.",
+      "La reinstalación de paquetes no es una acción permitida ni necesaria dado que el paquete ya reside en el sistema.",
+      "El éxito de la remediación depende de la integridad del gestor de arranque (GRUB) y la disponibilidad post-reinicio."
+    ],
+    "recommended_runbook": "activate-fixed-kernel"
+  },
+  "approval_required": true,
+  "approved": false,
+  "action_executed": false,
+  "usage": {
+    "promptTokenCount": 1515,
+    "candidatesTokenCount": 304,
+    "totalTokenCount": 1819,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1515
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "demo_fixture": true
+}

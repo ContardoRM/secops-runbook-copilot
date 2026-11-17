@@ -1,0 +1,23 @@
+{
+  "asset_id": "ssh-vulnerable",
+  "evaluated_at": "2026-11-07T19:24:11.085296+00:00",
+  "inventory_collected_at": "2026-11-07T19:24:10.818144+00:00",
+  "rule_id": "lab-openssh-musl-authentication-v1",
+  "scope": "Exact laboratory build; not a general vulnerability scanner",
+  "checks": {
+    "expected_lab_openssh": true,
+    "musl_identified": true,
+    "pam_unsupported": true,
+    "password_authentication_enabled": true,
+    "target_account_has_star": true,
+    "reference_sha_crypt_present": true,
+    "target_account_allowed": true
+  },
+  "pam_diagnostic": "command-line line 0: Unsupported option UsePAM",
+  "status": "exposure_conditions_present",
+  "exploitation_confirmed": false,
+  "recommended_runbook": "disable-ssh-password-authentication",
+  "approval_required": true,
+  "action_executed": false,
+  "demo_fixture": true
+}

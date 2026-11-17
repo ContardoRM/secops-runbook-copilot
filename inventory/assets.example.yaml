@@ -1,0 +1,25 @@
+assets:
+  - id: secops-kernel-lab
+    type: vm
+    address: 192.0.2.10
+    environment: laboratory
+    architecture: arm64
+    business_criticality: high
+    scenario: kernel-remediation
+    allowed_runbooks:
+      - activate-fixed-kernel
+    approval_required: true
+
+  - id: ssh-vulnerable
+    type: container
+    host: secops-docker-lab
+    host_address: 192.0.2.20
+    container_name: ssh-vulnerable
+    environment: laboratory
+    architecture: arm64
+    business_criticality: low
+    scenario: openssh-musl-authentication
+    allowed_runbooks:
+      - disable-ssh-password-authentication
+      - replace-patched-image
+    approval_required: true
